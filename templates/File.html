@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Upload New File</h3>
+<form method="post" enctype=multipart/form-data>
+  
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" id="inputGroupFileAddon03">Submit</button>
+    </div>
+              <div class="custom-file">
+                    <input type="file" name="file" class="custom-file-input" id="customFile" >
+                    <label class="custom-file-label" for="customFile">{{filename}}</label>
+              </div>
+</div>
+</form>
+{% endblock %}
