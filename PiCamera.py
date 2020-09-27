@@ -7,12 +7,20 @@ from flask import Flask, flash, redirect, render_template, request, url_for
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+UPLOAD_FOLDER = './files/'
+app.config['UPLOAD_FOLDER']
 
 
 @app.route('/')
 def index():
     title = 'Home'
     return render_template('index.html', title=title)
+
+
+def allowed_file(filena):
+    """check the file type"""
+    return '.' in filename and filename.rsplit(
+        '.', 1)[1].lower() in ALLOWED_EXTENTIONS
 
 
 if __name__ == '__main__':
