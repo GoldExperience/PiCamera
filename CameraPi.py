@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from flask_uploads import UploadSet, configure_uploads, ALL
 from camera import VideoCamera
 
