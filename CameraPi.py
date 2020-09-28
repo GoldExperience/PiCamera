@@ -33,7 +33,7 @@ def gen(camera):
 def index():
     return render_template('index.html')
 
-@app.route('/video_feed',method=['GET','POST'])
+@app.route('/video_feed',methods=['GET','POST'])
 def video_feed():
     """show video stream"""
     return Response(gen(VideoCamera()), mimetype='multipart/x-mixed-replace; boundary=frame')
